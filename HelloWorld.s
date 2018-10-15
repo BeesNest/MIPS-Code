@@ -21,6 +21,10 @@ main:
 		li $a0, 8
 		syscall
 
+		li $v0, 1
+		li $a0, 3
+		syscall
+
 
 
 
