@@ -13,6 +13,11 @@ main:
 		li $a0, 0
 		syscall
 
+		li $v0, 1
+		li $a0, 2
+		syscall
+
+
 
 
 		li $v0, 4       # syscall 4 (print_str)
