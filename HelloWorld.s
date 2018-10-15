@@ -13,33 +13,7 @@ main:
 		li $a0, 0
 		syscall
 
-		li $v0, 1
-		li $a0, 2
-		syscall
 
-		li $v0, 1
-		li $a0, 8
-		syscall
-
-		li $v0, 1
-		li $a0, 3
-		syscall
-
-		li $v0, 1
-		li $a0, 9
-		syscall
-
-		li $v0, 1
-		li $a0, 6
-		syscall
-
-		li $v0, 1
-		li $a0, 6
-		syscall
-
-		li $v0, 1
-		li $a0, 2
-		syscall
 
 		li $v0, 4       # syscall 4 (print_str)
         la $a0, msg     # argument: string
