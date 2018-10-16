@@ -1,5 +1,5 @@
 .data
-    start: .word 'A'
+    start: .word 'K'
     newLine: .asciiz "\n"
     curr: .word '@'
     comma: .asciiz ", "
@@ -80,8 +80,51 @@ main:
         la $a0, curr #load curr into a0 
         syscall
  
+        #prints s
+        lw $s1, curr
+        addi $s1, $s1, 4
+        sw $s1, curr 
+        li $v0, 4 
+        la $a0, curr 
+        syscall
+        
+        #prints k
+        lw $s1, curr
+        addi $s1, $s1, -8
+        sw $s1, curr 
+        li $v0, 4 
+        la $a0, curr 
+        syscall
+        
+        #prints e
+        lw $s1, curr
+        addi $s1, $s1, -6
+        sw $s1, curr 
+        li $v0, 4 
+        la $a0, curr 
+        syscall
 
+        #prints l
+        lw $s1, curr
+        addi $s1, $s1, 7
+        sw $s1, curr 
+        li $v0, 4 
+        la $a0, curr 
+        syscall
 
+        #prints a
+        lw $s1, curr
+        addi $s1, $s1, -11
+        sw $s1, curr 
+        li $v0, 4 
+        la $a0, curr 
+        syscall
+
+    #end program
+    li $v0, 10
+    syscall
+
+    #make new line
     enter: 
         #print new line
         li $v0, 4
