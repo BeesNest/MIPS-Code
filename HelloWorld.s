@@ -62,7 +62,7 @@ main:
         move $a0, $s0
         syscall
         
-        jal prln
+        jal enter
 
 
         #printing last name
@@ -81,4 +81,12 @@ main:
         syscall
  
 
+
+    enter: 
+        #print new line
+        li $v0, 4
+        la $a0, newLine
+        syscall
+        
+        jr $ra
 
