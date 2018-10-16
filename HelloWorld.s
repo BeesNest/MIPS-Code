@@ -8,13 +8,16 @@
 
 
 main:   
-		li $v0, 1
-		li $a0, 0
-		syscall
+ 		
+ 		li $v0, 4
+        la $a0, curr
+        syscall
 
-		li $v0, 1
-		li $a0, 2
-		syscall
+        addi $s0, $zero, 0 #zero
+        
+        li $v0, 1 #print int
+        move $a0, $s0 #move the $s0 values to the $a0 
+        syscall
 
 		li $v0, 1
 		li $a0, 8
