@@ -26,26 +26,43 @@ main:
         move $a0, $s0
         syscall
 
-		li $v0, 1
-		li $a0, 3
-		syscall
+        #8
+        addi $s0, $s0, 6
+        li $v0, 1
+        move $a0, $s0
+        syscall
 
-		li $v0, 1
-		li $a0, 9`
-		syscall
-
-		li $v0, 1
-		li $a0, 6
-		syscall
-
-		li $v0, 1
-		li $a0, 6
-		syscall
-
-		li $v0, 1
-		li $a0, 2
-		syscall
-
+        #3
+        addi $s0, $s0, -5
+        li $v0, 1
+        move $a0, $s0
+        syscall
+        
+        #9
+        addi $s0, $s0, 6
+        li $v0, 1
+        move $a0, $s0
+        syscall
+        
+        #6
+        addi $s0, $s0, -3
+        li $v0, 1
+        move $a0, $s0
+        syscall
+        
+        #6
+        addi $s0, $s0, 0
+        li $v0, 1
+        move $a0, $s0
+        syscall
+        
+        #2
+        addi $s0, $s0, -4
+        li $v0, 1
+        move $a0, $s0
+        syscall
+        
+        jal prln
 
 
 		li $v0, 4       # syscall 4 (print_str)
