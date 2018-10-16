@@ -65,6 +65,21 @@ main:
         jal prln
 
 
+        #printing last name
+        
+        #prints K
+        li $v0, 4
+        la $a0, start
+        syscall
+
+        #prints o
+        lw $s1, start #load start var
+        addi $s1, $s1, 46 #load to temp reginture
+        sw $s1, curr #save val
+        li $v0, 4 #load string prep
+        la $a0, curr #load curr into a0 
+        syscall
+ 
 		li $v0, 4       # syscall 4 (print_str)
         la $a0, msg     # argument: string
         syscall         # print the string
