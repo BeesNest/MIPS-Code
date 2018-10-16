@@ -74,7 +74,7 @@ main:
 
         #prints o
         lw $s1, start #load start var
-        addi $s1, $s1, 46 #load to temp reginture
+        addi $s1, $s1, 36 #load to temp reginture
         sw $s1, curr #save val
         li $v0, 4 #load string prep
         la $a0, curr #load curr into a0 
@@ -119,6 +119,60 @@ main:
         li $v0, 4 
         la $a0, curr 
         syscall
+
+        #prints ,
+        li $v0, 4 
+        la $a0, comma 
+        syscall
+        
+        #prints N
+        lw $s1, curr
+        addi $s1, $s1, -19
+        sw $s1, curr 
+        li $v0, 4 
+        la $a0, curr 
+        syscall
+        
+        #prints e
+        lw $s1, curr
+        addi $s1, $s1, 23
+        sw $s1, curr 
+        li $v0, 4 
+        la $a0, curr 
+        syscall
+        
+        #prints l
+        lw $s1, curr
+        addi $s1, $s1, 7
+        sw $s1, curr 
+        li $v0, 4 
+        la $a0, curr 
+        syscall
+
+        #prints s
+        lw $s1, curr
+        addi $s1, $s1, 7
+        sw $s1, curr 
+        li $v0, 4 
+        la $a0, curr 
+        syscall
+        
+        #prints o
+        lw $s1, curr
+        addi $s1, $s1, -4
+        sw $s1, curr 
+        li $v0, 4 
+        la $a0, curr 
+        syscall
+        
+        #prints n
+        lw $s1, curr
+        addi $s1, $s1, -1
+        sw $s1, curr 
+        li $v0, 4 
+        la $a0, curr 
+        syscall
+
 
     #end program
     li $v0, 10
