@@ -19,9 +19,12 @@ main:
         move $a0, $s0 #move the $s0 values to the $a0 
         syscall
 
-		li $v0, 1
-		li $a0, 8
-		syscall
+        #This is where i print numbers
+        #2
+        addi $s0, $s0, 2
+        li $v0, 1
+        move $a0, $s0
+        syscall
 
 		li $v0, 1
 		li $a0, 3
