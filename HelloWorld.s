@@ -80,12 +80,5 @@ main:
         la $a0, curr #load curr into a0 
         syscall
  
-		li $v0, 4       # syscall 4 (print_str)
-        la $a0, msg     # argument: string
-        syscall         # print the string
-
-        lw $t1, foobar
-        
-        jr $ra          # retrun to caller
 
 
