@@ -1,10 +1,9 @@
-
-        .data
-msg:   .asciiz "Koskela, Nelson"
-	.extern foobar 4
-
-        .text
-        .globl main
+.data
+    start: .word 'A'
+    newLine: .asciiz "\n"
+    curr: .word '@'
+    comma: .asciiz ", "
+.text
 
 
 
@@ -26,7 +25,7 @@ main:
 		syscall
 
 		li $v0, 1
-		li $a0, 9
+		li $a0, 9`
 		syscall
 
 		li $v0, 1
@@ -50,3 +49,5 @@ main:
         lw $t1, foobar
         
         jr $ra          # retrun to caller
+
+
