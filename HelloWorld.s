@@ -1,4 +1,5 @@
 .data
+	#defining variables
     start: .word 'K'
     newLine: .asciiz "\n"
     curr: .word '@'
@@ -6,7 +7,7 @@
 .text
 
 
-
+#the main function that runs everything
 main:   
  		
  		li $v0, 4
@@ -174,11 +175,11 @@ main:
         syscall
 
 
-    #end program
+    #end program so we can make class enter
     li $v0, 10
     syscall
 
-    #make new line
+    #make new line and is basically a class
     enter: 
         #print new line
         li $v0, 4
