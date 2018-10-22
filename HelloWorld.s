@@ -9,8 +9,10 @@
 
 #the main function that runs everything
 main:   
- 		
- 		li $v0, 4
+ 		#This is i comment
+ 		#printing section \
+ 		#lets get this
+ 		li $v0, 4 
         la $a0, curr
         syscall
 
